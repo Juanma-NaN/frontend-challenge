@@ -20,7 +20,7 @@ module.exports = {
   ignorePatterns: ['.eslintrc.js'],
   overrides: [
     {
-      files: ['**/*.ts', '**/*.tsx'],
+      files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
       rules: {
         'react/prop-types': 'off',
         'no-restricted-imports': [

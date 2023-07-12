@@ -1,7 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { FC } from 'react';
 
-const Item = ({ icon, title, text }) => {
+interface ItemProps {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+const Item: FC<ItemProps> = ({ icon, title, text }) => {
   return (
     <div className="flex flex-col items-center">
       <img alt={title} className="h-20" src={icon} />
@@ -9,12 +14,6 @@ const Item = ({ icon, title, text }) => {
       <p className="text-white text-center max-w-[290px] md:max-w-[360px] text-base font-body">{text}</p>
     </div>
   );
-};
-
-Item.propTypes = {
-  icon: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
 };
 
 export default Item;

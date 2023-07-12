@@ -4,7 +4,7 @@ import Button from './Button';
 const Form = () => {
   const [error, setError] = useState(false);
   const [email, setEmail] = useState('');
-  const checkEmail = (email) => {
+  const checkEmail = (email: string) => {
     const regex = /\S+@\S+\.\S+/;
     return regex.test(email);
   };

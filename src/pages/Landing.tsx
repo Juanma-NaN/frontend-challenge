@@ -1,7 +1,7 @@
 import React from 'react';
 import Image1 from '../assets/images/illustration-intro.png';
 import Image2 from '../assets/images/illustration-stay-productive.png';
-import { items, testimonies } from '../assets/utils.js';
+import { items, testimonies } from '../assets/utils';
 import Arrow from '../assets/images/icon-arrow.svg';
 import Item from '../components/Item';
 import Header from '../components/Header';

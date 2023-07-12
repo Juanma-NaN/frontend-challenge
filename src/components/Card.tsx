@@ -1,7 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { FC } from 'react';
 
-const Card = ({ text, image, title, name }) => {
+interface CardProps {
+  text: string;
+  image: string;
+  title: string;
+  name: string;
+}
+
+const Card: FC<CardProps> = ({ text, image, title, name }) => {
   return (
     <div className="flex flex-col bg-darkblue3 p-6 gap-6">
       <p className="text-xsm md:text-base text-white max-w-[250px] md:max-w-[300px] font-body">{text}</p>
@@ -14,13 +20,6 @@ const Card = ({ text, image, title, name }) => {
       </div>
     </div>
   );
-};
-
-Card.propTypes = {
-  text: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 };
 
 export default Card;
