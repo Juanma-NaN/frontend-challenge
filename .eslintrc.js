@@ -17,6 +17,11 @@ module.exports = {
     'jest/globals': true,
   },
   plugins: ['react', 'jsx-a11y', 'import', 'jest'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   ignorePatterns: ['.eslintrc.js'],
   overrides: [
     {
