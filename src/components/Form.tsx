@@ -9,12 +9,12 @@ const Form = () => {
     return regex.test(email);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { value: React.SetStateAction<string> } }) => {
     error && setError(false);
     setEmail(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     if (!checkEmail(email)) {
       setError(true);
